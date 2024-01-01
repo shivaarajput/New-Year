@@ -9,7 +9,7 @@ This project is a simple and interactive New Year 2024 greeting card webpage cre
 - New Year countdown timer to build anticipation.
 
 ## Getting Started
-1. Clone the repository: `git clone https://github.com/yourusername/ny2024-greeting-card.git`
+1. Clone the repository: `git clone https://github.com/thebrainliestuser/New-Year.git`
 2. Open `index.html` in your preferred web browser.
 
 ## Technologies Used
