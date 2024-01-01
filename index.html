@@ -4,6 +4,7 @@
 <head>
     <title>Shiva | New Year 2024</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand|Pacifico|Great+Vibes|Parisienne" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" type="image/png" href="2024.png">
     <meta name="description" content="Best Wishes for New Year 2024. Created by Shiva.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -254,12 +255,33 @@ h5 {
     position: absolute;
     z-index: 2;
 }
+.whatsapp-container {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+}
 
+.whatsapp-button {
+    background-color: #25D366; 
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
 
-
-/* Add additional styles as needed */
-
-
+.whatsapp-button a {
+    color: #fff;
+    text-decoration: none;
+}
+.whatsapp-button i {
+    margin-right: 10px;
+.whatsapp-button:hover {
+    background-color: #128C7E; /* Darker shade on hover */
+}
 </style>
 
 <body>
@@ -279,18 +301,25 @@ h5 {
                     <h1>New Year</h1>
                     <h3>2024</h3>
                     <div id="hr"></div>
-                    <h5>Touch Me</h5>
                     <h1 id="new-year-quote"></h1>
+                    <h5>Touch Me</h5>
                     
                 </center>
             </div>
             <div id="left-back">
-              <h3>Happy New Year! I can't believe another year has passed so quickly.</h3>
+              <h3>Happy New Year!</h3>
             </div>
         </div>
         <div id="right-front">
-            <h3>"The bad news is time flies. The good news is you're the pilot!"</h3>
+            <h3>"Wishing you a year filled with love, laughter, and endless possibilities!"</h3>
         </div>
+    </div>
+    <div class="whatsapp-container">
+            <div class="whatsapp-button">
+                <a id="newUrl" href="whatsapp://send?text=https://thebrainliestuser.github.io/New-Year/?name=" target="_blank">
+                <i class="fab fa-whatsapp"></i> Share
+                </a>
+            </div>
     </div>
     
     <script>
@@ -298,6 +327,8 @@ h5 {
           const urlParams = new URLSearchParams(window.location.search);
           const nameFromURL = urlParams.get('name');
           const quoteElement = document.getElementById('new-year-quote');
+          let link = document.getElementById("newUrl");
+
 
           let name;
 
@@ -315,6 +346,7 @@ h5 {
          }
 
          quoteElement.textContent = `${name}!`;
+         link.href += `${name}!`;
 
 
 
