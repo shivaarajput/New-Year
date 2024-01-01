@@ -296,16 +296,26 @@ h5 {
     <script>
           
           const urlParams = new URLSearchParams(window.location.search);
-          const name = urlParams.get('name');
-
+          const nameFromURL = urlParams.get('name');
           const quoteElement = document.getElementById('new-year-quote');
 
-          if (name) {
-              quoteElement.textContent = `${name}!`;
+          let name;
+
+          if (nameFromURL) {
+             name = nameFromURL;
           } else {
-              const userInput = prompt('Please enter your name:');
-              quoteElement.textContent = `${userInput || 'Shiva'}!`;
-          }
+          // Check if the name is already stored in localStorage
+             name = localStorage.getItem('userName');
+  
+            if (!name) {
+          // If not, prompt the user for input and store it in localStorage
+                name = prompt('Please enter your name:') || 'Shiva';
+                localStorage.setItem('userName', name);
+            }
+         }
+
+         quoteElement.textContent = `${name}!`;
+
 
 
           var playSong = function() {
