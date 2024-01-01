@@ -296,10 +296,16 @@ h5 {
     <script>
           
           const urlParams = new URLSearchParams(window.location.search);
-          const name = urlParams.get('name') || 'Shiva'; // Use 'Shiva' as default if no name is provided
+          const name = urlParams.get('name');
 
           const quoteElement = document.getElementById('new-year-quote');
-          quoteElement.textContent = `${name}!`;
+
+          if (name) {
+              quoteElement.textContent = `${name}!`;
+          } else {
+              const userInput = prompt('Please enter your name:');
+              quoteElement.textContent = `${userInput || 'Shiva'}!`;
+          }
 
 
           var playSong = function() {
