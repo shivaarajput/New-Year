@@ -17,12 +17,7 @@ This project is a simple and interactive New Year 2024 greeting card webpage cre
 - CSS
 - JavaScript
 
-## Structure
-New-Year/
-│
-├── index.html
-├── 2024.png
-└── README.md
+Feel free to customize and share this greeting card with your friends and family. 
 
-Feel free to customize and share this greeting card with your friends and family. Wishing you a joyful New Year! 🎉
+**Wishing you a joyful New Year! 🎉**
 
